@@ -1,0 +1,121 @@
+/* --- CONFIGURAÇÃO GLOBAL --- */
+:root {
+    --azul-ceu: #56CCF2;
+    --azul-oceano: #2F80ED;
+    --verde-relva: #78ffd6;
+    --verde-natureza: #a8ff78;
+    --branco-vidro: rgba(255, 255, 255, 0.7);
+    --sombra-suave: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--azul-ceu) 0%, var(--verde-relva) 100%);
+    background-attachment: fixed;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* --- EFEITO DE VIDRO (GLASSMORPHISM) --- */
+.vidro {
+    background: var(--branco-vidro);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: var(--sombra-suave);
+}
+
+/* --- CABEÇALHO E NAVEGAÇÃO --- */
+.cabecalho {
+    padding: 15px 40px;
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logotipo {
+    font-size: 2em;
+    font-weight: bold;
+    background: -webkit-linear-gradient(var(--azul-oceano), #11998e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #0056b3;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 20px;
+}
+
+.menu a:hover {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* --- CONTEÚDO PRINCIPAL --- */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 40px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #004d40;
+    font-weight: 300;
+}
+
+/* --- BOTÕES GLOSSY (BRILHANTES) --- */
+.botao-glossy {
+    background: linear-gradient(to bottom, #89f7fe 0%, #66a6ff 100%);
+    border: 1px solid rgba(255,255,255,0.8);
+    border-radius: 30px;
+    padding: 12px 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    box-shadow: inset 0 2px 5px rgba(255,255,255,0.9), 0 4px 10px rgba(0,0,0,0.15);
+    text-transform: uppercase;
+    transition: transform 0.2s;
+}
+
+.botao-glossy:hover {
+    transform: scale(1.05);
+}
+
+/* --- GRELHA DE INOVAÇÕES --- */
+.grelha-inovacoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.cartao-inovacao {
+    padding: 25px;
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.cartao-inovacao:hover {
+    transform: translateY(-10px);
+}
